@@ -39,11 +39,7 @@ export const ButtonDefault: React.FC<IButtonDefault> = ({
   hovercolor,
 }) => {
   return (
-    <S.Container
-      $width={width}
-      href={href}
-      target={!blank ? "_blank" : undefined}
-    >
+    <S.Container $width={width}>
       <S.Button
         onClick={onClick}
         $hovercolor={hovercolor}
