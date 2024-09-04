@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"]
+    },
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "target": "es2015", // ou "es6" ou "esnext"
+    "lib": ["dom", "es2015"], // ou adicione outras, como "es2017", "esnext"
+    "esModuleInterop": true, // Para compatibilidade com importações comuns
+    "skipLibCheck": true // Ignora checagem de tipos em arquivos de bibliotecas
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
