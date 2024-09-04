@@ -12,7 +12,7 @@ interface IButton {
   $height: string;
 }
 
-export const Container = styled.a<IConatiner>`
+export const Container = styled.div<IConatiner>`
   width: ${({$width}) => ($width)};
   text-decoration: none;
 `;

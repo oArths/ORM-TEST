@@ -50,22 +50,21 @@ export default function Header() {
       </S.ContainerMenu>
       <S.ContainerButton>
         <ButtonTheme />
-
-        <ButtonDefault
-          blank={true}
-          href="#Contato"
-          title="Contato"
-          right={true}
-          stroke={1.98}
-          minfontsize="1rem"
-          idealfontsize="2.5vw"
-          maxfontsize="1.25rem"
-          background={currentTheme.colors.orange500}
-          hovercolor={currentTheme.colors.orange600}
-          size={20}
-          width="143px"
-          height="41px"
-        />
+        <S.LinkButton href="#Contato">
+          <ButtonDefault
+            title="Contato"
+            right={true}
+            stroke={1.98}
+            minfontsize="1rem"
+            idealfontsize="2.5vw"
+            maxfontsize="1.25rem"
+            background={currentTheme.colors.orange500}
+            hovercolor={currentTheme.colors.orange600}
+            size={20}
+            width="143px"
+            height="41px"
+          />
+        </S.LinkButton>
       </S.ContainerButton>
       <Menu Close={() => setModal(!modal)} isOpen={modal} />
     </S.Header>

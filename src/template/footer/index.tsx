@@ -61,23 +61,23 @@ export const Footer = () => {
             <S.Column>
               <S.ContainerText>
                 <S.Title>Explore</S.Title>
-                <S.SubTitle href="#Sevicos">Nossos Serviços</S.SubTitle>
+                <S.SubTitleLink href="#Sevicos">Nossos Serviços</S.SubTitleLink>
                 <S.SubTitle>Parcerias</S.SubTitle>
               </S.ContainerText>
             </S.Column>
             <S.Column>
               <S.ContainerText>
                 <S.Title>Connect</S.Title>
-                <S.SubTitle href="#Contato">Contato</S.SubTitle>
+                <S.SubTitleLink href="#Contato">Contato</S.SubTitleLink>
                 <S.SubTitle>Contrate nossos devs</S.SubTitle>
               </S.ContainerText>
             </S.Column>
             <S.Column>
               <S.ContainerText>
                 <S.Title>Sobre</S.Title>
-                <S.SubTitle href="#QuemSomos">História</S.SubTitle>
-                <S.SubTitle href="#Valores">Motivos & Valores</S.SubTitle>
-                <S.SubTitle href="#Ecossistema">Empresa como Hub</S.SubTitle>
+                <S.SubTitleLink href="#QuemSomos">História</S.SubTitleLink>
+                <S.SubTitleLink href="#Valores">Motivos & Valores</S.SubTitleLink>
+                <S.SubTitleLink href="#Ecossistema">Empresa como Hub</S.SubTitleLink>
               </S.ContainerText>
             </S.Column>
           </S.SectionWarpOne>
@@ -85,13 +85,13 @@ export const Footer = () => {
           <S.SectionWarpTow>
             <S.ContainerTextTow>
               <S.Title>Entre em Contato</S.Title>
-              <S.SubTitle
+              <S.SubTitleLink
                 href="https://wa.me/5511949963686?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
                 target="_blank"
               >
                 <S.WhatsApp alt="Icone do WhatsApp" src={WhatsApp} /> (11) 9 1234-5678
-              </S.SubTitle>
-              <S.SubTitle
+              </S.SubTitleLink>
+              <S.SubTitleLink
                 href="mailto:suportededomingo@email.com?subject=Solicitação%20de%20Informações&body=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços."
                 target="_blank"
               >
@@ -101,7 +101,7 @@ export const Footer = () => {
                   color={currentTheme.colors.gray1000}
                 />{" "}
                 suportededomingo@email.com
-              </S.SubTitle>
+              </S.SubTitleLink>
             </S.ContainerTextTow>
 
             <S.ContainerTextTow>
@@ -162,11 +162,11 @@ export const Footer = () => {
           <S.SectionWarpFour>
             <S.ContainerTextFour>
               <S.Title>Sobre</S.Title>
-              <S.SubTitle href="#Sevicos">Nossos Serviços</S.SubTitle>
-              <S.SubTitle href="#Contato">Contato</S.SubTitle>
-              <S.SubTitle href="#QuemSomos">História</S.SubTitle>
-              <S.SubTitle href="#Valores">Motivos & Valores</S.SubTitle>
-              <S.SubTitle href="#Ecossistema">Empresa como Hub</S.SubTitle>
+              <S.SubTitleLink href="#Sevicos">Nossos Serviços</S.SubTitleLink>
+              <S.SubTitleLink href="#Contato">Contato</S.SubTitleLink>
+              <S.SubTitleLink href="#QuemSomos">História</S.SubTitleLink>
+              <S.SubTitleLink href="#Valores">Motivos & Valores</S.SubTitleLink>
+              <S.SubTitleLink href="#Ecossistema">Empresa como Hub</S.SubTitleLink>
             </S.ContainerTextFour>
             <div>
               <S.Title>Nossas Redes & Comunidades</S.Title>
@@ -175,25 +175,25 @@ export const Footer = () => {
                   href="https://discord.gg/Uyw4bFsK4u"
                   target="_blank"
                 >
-                  <S.Icon src={Discord} />
+                  <S.Icon alt="Icone do discord" src={Discord} />
                 </S.LinkIcons>
                 <S.LinkIcons
                   href="https://github.com/orgs/suporte-de-domingo"
                   target="_blank"
                 >
-                  <S.Icon src={Git} />
+                  <S.Icon alt="Icone do github" src={Git} />
                 </S.LinkIcons>
                 <S.LinkIcons
                   href="https://www.instagram.com/suportededomingo/"
                   target="_blank"
                 >
-                  <S.Icon src={Insta} />
+                  <S.Icon alt="Icone do instagram" src={Insta} />
                 </S.LinkIcons>
                 <S.LinkIcons
                   href="https://www.linkedin.com/company/suporte-de-domingo/"
                   target="_blank"
                 >
-                  <S.Icon src={Link} />
+                  <S.Icon alt="Icone do linkedin" src={Link} />
                 </S.LinkIcons>
               </S.Icons>
             </div>

@@ -190,12 +190,26 @@ export const Title = styled.h3`
       ${theme.typography.archivo600}
     `}
 `;
-export const SubTitle = styled.a`
+export const SubTitleLink = styled.a`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 5px;
   font-size: 0.938rem;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.gray1000};
+  ${({ theme }) =>
+    css`
+      ${theme.typography.hind300}
+    `}
+`;
+export const SubTitle= styled.p`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.938rem;
+  text-decoration: none;
   color: ${({ theme }) => theme.colors.gray1000};
   ${({ theme }) =>
     css`

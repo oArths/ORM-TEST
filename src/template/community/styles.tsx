@@ -34,9 +34,10 @@ justify-content:right;
 width: 100%;
 
 `; 
-export const ButtonWarp = styled.div`
+export const ButtonWarp = styled.a`
 display: flex;
 flex-direction:row;
+text-decoration: none;
 width: 100%;
 height: 48px;
 

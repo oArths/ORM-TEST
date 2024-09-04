@@ -70,6 +70,11 @@ export const Option = styled.a`
     ${theme.typography.archivo600}
   `}
 `;
+export const LinkButton = styled.a`
+text-decoration: none;
+width: 143px;
+height: 41px;
+`; 
 export const ContainerButton = styled.div`
   display: flex;
   flex-direction: row;

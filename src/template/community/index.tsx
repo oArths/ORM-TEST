@@ -22,7 +22,10 @@ export const Community = () => {
               ecossistema.
             </S.TextBodyDiscord>
             <S.ButtonContainerLeft>
-              <S.ButtonWarp>
+              <S.ButtonWarp
+                href="https://discord.gg/Uyw4bFsK4u"
+                target="_blank"
+              >
                 <ButtonDefault
                   title="Entrar"
                   width="100%"
@@ -35,7 +38,6 @@ export const Community = () => {
                   size={32}
                   background={currentTheme.colors.blue500}
                   hovercolor={currentTheme.colors.blue600}
-                  href="https://discord.gg/Uyw4bFsK4u"
                 />
               </S.ButtonWarp>
             </S.ButtonContainerLeft>
@@ -63,7 +65,11 @@ export const Community = () => {
               ecossistema.
             </S.TextBodyDiscord>
             <S.ButtonContainerRight>
-              <S.ButtonWarp id="QuemSomos">
+              <S.ButtonWarp
+                id="QuemSomos"
+                href="https://chat.whatsapp.com/I6tE2UGQnsqFcPQ1zl8Hgl"
+                target="_blank"
+              >
                 <ButtonDefault
                   title="Entrar"
                   width="100%"
@@ -76,7 +82,6 @@ export const Community = () => {
                   size={32}
                   background={currentTheme.colors.orange500}
                   hovercolor={currentTheme.colors.orange600}
-                  href="https://chat.whatsapp.com/I6tE2UGQnsqFcPQ1zl8Hgl"
                 />
               </S.ButtonWarp>
             </S.ButtonContainerRight>
