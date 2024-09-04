@@ -38,7 +38,7 @@ export const Home = () => {
           </S.ContainerText>
         </S.Container>
       </S.HomeWarp>
-      <S.Img src={sis} />
+      <S.Img src={sis} alt="imagem de uma onde que complementa o background" />
     </S.Home>
   );
 };
