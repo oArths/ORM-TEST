@@ -9,7 +9,7 @@ export const Home = () => {
   return (
     <S.Home >
       <S.BackImg  alt="imagem de fundo da seção home para desktop" src={ilu} />
-      <S.BackImgMobile alt="imagem de fundo da seção home para mobile" src={HomeMobile} />
+      <S.BackImgMobile loading="lazy" alt="imagem de fundo da seção home para mobile" src={HomeMobile} />
       <S.HomeWarp>
         <S.Container>
           <S.ContainerText>
