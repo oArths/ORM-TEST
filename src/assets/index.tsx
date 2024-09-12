@@ -27,7 +27,7 @@ export { default as jacket  } from './Images/Jacket Boy.svg'
 export { default as beanie  } from './Images/Beanie Boy.svg'
 export { default as beaded  } from './Images/Beaded Guy.svg'
 export { default as backgroundLine  } from './Images/backgroundLine.svg'
-export { default as backgroundLineMobile  } from './Images/BackgroundLineMobile.svg'
+export { default as backgroundLineMobile  } from './Images/backgroundLineMobile.svg'
 
 
 
