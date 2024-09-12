@@ -39,7 +39,7 @@ export const ButtonDefault: React.FC<IButtonDefault> = ({
   hovercolor,
 }) => {
   return (
-    <S.Container $width={width}>
+    <S.Container $width={width} $height={height}>
       <S.Button
         onClick={onClick}
         $hovercolor={hovercolor}
@@ -47,7 +47,6 @@ export const ButtonDefault: React.FC<IButtonDefault> = ({
         $idealfontsize={idealfontsize}
         $maxfontsize={maxfontsize}
         $backgroundcolor={background}
-        $height={height}
       >
         {left && (
           <I.ArrowUpLeft color={color} strokeWidth={stroke} size={size} />

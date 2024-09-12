@@ -17,8 +17,8 @@ export const Menu = ({ isOpen, Close }) => {
           </S.ButtonWrap>
           <S.ContainerNav>
             <S.OptionsWrap>
-              <S.Options onClick={Close} href="#inicio">início</S.Options>
-              <S.Options  onClick={Close} href="#QuemSomos">quem somos</S.Options>
+              <S.Options onClick={Close} href="#inicio">Início</S.Options>
+              <S.Options  onClick={Close} href="#QuemSomos">Quem Somos</S.Options>
               <S.Options onClick={Close}  href="#Sevicos">Serviços</S.Options>
               <S.Options onClick={Close}  href="#Ecossistema">Ecossistema</S.Options>
               <S.Options onClick={Close}  href="#Sevicos">Comunidade</S.Options>
@@ -26,7 +26,7 @@ export const Menu = ({ isOpen, Close }) => {
           </S.ContainerNav>
           <S.ContainerInfos>
             <S.Title>ENTRE EM CONTATO</S.Title>
-            <S.SubTitle>suportededomingo@email.com</S.SubTitle>
+            <S.SubTitle>suportededomingo@outlook.com</S.SubTitle>
             <S.Icons>
             <S.LinkIcons
                 href="https://github.com/orgs/suporte-de-domingo"

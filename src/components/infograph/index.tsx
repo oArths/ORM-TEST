@@ -26,7 +26,7 @@ export const InfoGraph = () => {
                         </S.SubTitle>
                       </S.ContainerText>
                       <S.BarRightRed>
-                        <S.Number>01</S.Number>
+                        <S.NumberLeft>01</S.NumberLeft>
                       </S.BarRightRed>
                     </S.ContainerBarRed>
                   </S.Container>
@@ -40,14 +40,14 @@ export const InfoGraph = () => {
                     </S.SubTitle>
                   </S.ContainerText>
                   <S.BarRightBlue>
-                    <S.Number>02</S.Number>
+                    <S.NumberLeft>02</S.NumberLeft>
                   </S.BarRightBlue>
                 </S.ContainerBarBlue>
               </S.Container>
             </S.Yellow>
             <S.ContainerBarYellow>
               <S.BarLeftYellow>
-                <S.Number>03</S.Number>
+                <S.NumberRight>03</S.NumberRight>
               </S.BarLeftYellow>
               <S.ContainerText>
                 <S.Title>Venda de Serviços</S.Title>
@@ -61,7 +61,7 @@ export const InfoGraph = () => {
         </S.Green>
         <S.ContainerBar>
           <S.BarLeft>
-            <S.Number>04</S.Number>
+            <S.NumberRight>04</S.NumberRight>
           </S.BarLeft>
           <S.ContainerText>
             <S.Title>Comunidade do discord</S.Title>

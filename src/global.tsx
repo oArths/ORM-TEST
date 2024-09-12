@@ -9,5 +9,6 @@ export const Global = createGlobalStyle`
   border: none; 
   outline: none;
   font-size: 16px;
+  box-sizing: border-box;
 }
 `;

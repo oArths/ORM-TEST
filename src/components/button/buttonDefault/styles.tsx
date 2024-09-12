@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 interface IConatiner{
   $width: string;
+  $height: string;
+
 
 }
 interface IButton {
@@ -9,11 +11,11 @@ interface IButton {
   $maxfontsize: string;
   $hovercolor: string;
   $backgroundcolor: string;
-  $height: string;
 }
 
 export const Container = styled.div<IConatiner>`
   width: ${({$width}) => ($width)};
+  height: ${({$height}) => ($height)};
   text-decoration: none;
 `;
 export const Button = styled.button<IButton>`
@@ -25,7 +27,7 @@ export const Button = styled.button<IButton>`
     `clamp(${$minfontsize}, ${$idealfontsize}, ${$maxfontsize})`};
   gap: 5px;
   width: 100%;
-  height:${({$height}) => ($height)};
+  height:100%;
   border-radius: 2px;
   background-color: ${({$backgroundcolor}) => ($backgroundcolor)};
   color: ${({ theme }) => theme.colors.white900};

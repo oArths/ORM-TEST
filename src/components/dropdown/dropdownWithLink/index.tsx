@@ -21,14 +21,14 @@ return(
         <I.ChevronDown color={theme ? currentTheme.colors.neutral100 : currentTheme.colors.neutral900} size={20} />
         </S.title>
         <S.visible>
-            <S.OptionConteiner >
+            <S.OptionContainer >
         {data && data.map((Data,index)=>(
                 <S.Option key={index} target="_blank" href={Data.link} >
                     {Data.name}
                     {!type && <I.ArrowUpRight color={currentTheme.colors.neutral100} strokeWidth={1} size={20} /> }
                     </S.Option>
             ))}
-            </S.OptionConteiner>
+            </S.OptionContainer>
         </S.visible>
     </S.Container>
 )

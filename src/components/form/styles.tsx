@@ -22,7 +22,7 @@ export const ButtonWarp = styled.div`
     display: flex;
  align-items: center;
  justify-content: left;
- width: 95%;
+ width: 100%;
   }
 `;
 export const ErrorWarp= styled.div`
@@ -46,9 +46,9 @@ color: ${({theme}) => theme.colors.red500};
 export const LabelWarp = styled.aside`
   display: flex;
   align-items: start;
-  width: 106%;
+  width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoint.laptop}) {
-    width: 95%;
+    width: 90%;
 
   }
 `;
@@ -58,7 +58,7 @@ export const InputWrap = styled.span`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   gap: 7px;
 `;
 export const Label = styled.h1`

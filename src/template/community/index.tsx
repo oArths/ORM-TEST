@@ -34,7 +34,7 @@ export const Community = () => {
                   idealfontsize="2.5vw"
                   maxfontsize="2rem"
                   height="100%"
-                  stroke={2.27}
+                  stroke={3.5}
                   size={32}
                   background={currentTheme.colors.blue500}
                   hovercolor={currentTheme.colors.blue600}
@@ -43,11 +43,16 @@ export const Community = () => {
             </S.ButtonContainerLeft>
           </S.Discord>
           <S.QrCode>
-            <S.SubTitleQR>Ou entre pelo QR Code </S.SubTitleQR>
-            <S.QR alt="imagem de um QR code para acessar o discord" src={QR} />
+            <S.ContainerQrCode>
+              <S.SubTitleQR>Ou entre pelo QR Code </S.SubTitleQR>
+              <S.QR
+                alt="imagem de um QR code para acessar o discord"
+                src={QR}
+              />
+            </S.ContainerQrCode>
           </S.QrCode>
         </S.ContainerWarp>
-        <S.ContainerWarp>
+        <S.ContainerWarpTwo>
           <S.WhatsApp>
             <S.PhoneImage
               alt="imagem De um celular com o WhatsApp do grupo da suporte de domingo"
@@ -55,15 +60,15 @@ export const Community = () => {
             />
           </S.WhatsApp>
           <S.Community>
-            <S.subTitleDiscord>
+            <S.subTitleWhatsApp>
               Grupo & Comunidade no WhatsApp
-            </S.subTitleDiscord>
-            <S.TextBodyDiscord>
+            </S.subTitleWhatsApp>
+            <S.TextBodyWhatsApp>
               Conheça nossos serviços, nossa história e o nosso ecossistema.
               Conheça nossos serviços, nossa história e o nosso
               ecossistema.Conheça nossos serviços, nossa história e o nosso
               ecossistema.
-            </S.TextBodyDiscord>
+            </S.TextBodyWhatsApp>
             <S.ButtonContainerRight>
               <S.ButtonWarp
                 id="QuemSomos"
@@ -86,7 +91,7 @@ export const Community = () => {
               </S.ButtonWarp>
             </S.ButtonContainerRight>
           </S.Community>
-        </S.ContainerWarp>
+        </S.ContainerWarpTwo>
       </S.ContainerCommunity>
     </S.Section>
   );

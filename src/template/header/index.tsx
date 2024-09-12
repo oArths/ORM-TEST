@@ -1,7 +1,6 @@
 import * as S from "./styles.tsx";
 import * as I from "lucide-react";
-import Logo from "../../assets/Sdd.svg";
-import LogoDark from "../../assets/SddDark.svg";
+import {Sdd, SddDark} from '@assets/index.tsx'
 import { useThemes } from "../../theme/useThema.tsx";
 import { DropDownWithLink } from "../../components/dropdown/dropdownWithLink/index.tsx";
 import ButtonTheme from "../../components/button/buttonTheme/index.tsx";
@@ -33,7 +32,7 @@ export default function Header() {
     <S.Header>
       <S.Logo
         alt="logo da empresa suporte de domingo"
-        src={theme === "light" ? Logo : LogoDark}
+        src={theme === "light" ? Sdd : SddDark}
       />
       <S.Nav>
         <S.Option href="#inicio">Início</S.Option>

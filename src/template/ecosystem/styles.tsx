@@ -85,6 +85,11 @@ export const subTitle = styled.h2`
     css`
       ${theme.typography.archivo600}
     `}
+ @media (max-width : ${({ theme }) => theme.breakpoint.mobileG}) {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
 `;
 export const TextBody = styled.span`
   font-size: 1.25rem;

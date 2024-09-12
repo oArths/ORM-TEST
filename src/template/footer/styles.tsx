@@ -13,7 +13,7 @@ export const ContainerLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 80%;
+  width: 90%;
   height: 20%;
   @media (max-width : ${({ theme }) => theme.breakpoint.mobileG}) {
     justify-content: center;
@@ -25,7 +25,7 @@ export const ContainerLogo = styled.div`
 export const ErrorWarp= styled.div`
 display: flex;
 align-items: start;
-height: 30px;
+height: 15px;
 width: 100%;
 
 `;
@@ -55,7 +55,7 @@ export const ContainerInfo = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 90%;
   height: auto;
 `;
 export const ColumnContainer = styled.div`
@@ -65,7 +65,7 @@ export const ColumnContainer = styled.div`
   padding: 60px 0px;
   justify-content: space-around;
   align-items: start;
-  width: 100%;
+  width: 90%;
   height: auto;
   @media(min-width: ${({ theme }) => theme.breakpoint.mobileG}) and 
   (max-width: ${({ theme }) => theme.breakpoint.laptop}) {
@@ -78,7 +78,7 @@ display: flex;
 flex-wrap: wrap;
 flex-direction: row;
 justify-content: space-between;
-width: 33%;
+width: 32%;
 gap: 20px;
 @media (max-width : ${({ theme }) => theme.breakpoint.mobileG}) {
  display :none ;
@@ -90,14 +90,23 @@ gap: 20px;
 
   }
 `; 
-export const SectionWarpTow = styled(SectionWarpOne)`
+export const SectionWarpTow = styled.div`
+display: flex;
+width: 32%;
 flex-direction: column;
+align-items: center;
 gap: 40px;
+@media (max-width : ${({ theme }) => theme.breakpoint.mobileG}) {
+ display :none ;
+}
 @media(min-width: ${({ theme }) => theme.breakpoint.mobileG}) and 
   (max-width: ${({ theme }) => theme.breakpoint.laptop}) {
     flex-wrap: nowrap;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
+    margin-bottom: 45px;
+
 
   }
 
@@ -108,7 +117,7 @@ display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: auto;
+  width: 32%;
   gap: 26px;
   @media(min-width: ${({ theme }) => theme.breakpoint.mobileG}) and 
   (max-width: ${({ theme }) => theme.breakpoint.laptop}) {
@@ -116,7 +125,7 @@ display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: right;
-    width: 90%;
+    width: 100%;
     gap: 0px;
   }
   @media (max-width : ${({ theme }) => theme.breakpoint.mobileG}) {
@@ -155,7 +164,7 @@ export const ContainerText = styled.span`
   align-items: start;
   justify-content: center;
   width: 100%;
-  gap: 6px;
+  gap: 10px;
 
 `;
 export const ButtonWarp= styled.span`
@@ -168,12 +177,8 @@ justify-content: left;
 
 `
 export const ContainerTextTow = styled(ContainerText)`
+  width: auto;
 
-@media(min-width: ${({ theme }) => theme.breakpoint.mobileG}) and 
-(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
-  width: 50%;
-
-}
 `;
 export const ContainerTextFour = styled(ContainerText)`
 align-items: center;
@@ -232,6 +237,7 @@ export const Icons = styled.div`
   justify-content: space-around;
   width: 100%;
   max-width: 230px;
+  margin-top: 20px;
 `;
 export const Icon = styled.img`
   object-fit: contain;
@@ -256,10 +262,14 @@ export const ContainerReserved = styled(ContainerLogo)`
 
 }
 `;
-export const Reserved = styled(SubTitle)`
+export const Reserved = styled.span`
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 5px;
+  font-size: 0.938rem;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.gray1000};
   ${({ theme }) =>
     css`
       ${theme.typography.hind300}

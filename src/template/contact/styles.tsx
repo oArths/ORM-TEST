@@ -20,7 +20,7 @@ export const ContainerContact = styled.main`
 
   }
   @media (min-width : ${({ theme }) => theme.breakpoint.laptop}){
-    width:87%;
+    width:90%;
   }
 `;
 export const ImageContainer = styled.div`
@@ -44,5 +44,6 @@ export const ImageCut = styled.div`
 `;
 export const imageIllustration = styled.img`
   width: 90%;
+  -webkit-user-drag: none;
   object-fit: cover;
 `;

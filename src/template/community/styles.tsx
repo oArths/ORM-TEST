@@ -11,7 +11,7 @@ export const ContainerCommunity = styled.div`
   align-items: center;
   width: 90%;
   height: auto;
-  gap: 80px;
+  gap: 40px;
   margin-bottom: 80px;
   @media (min-width : ${({ theme }) => theme.breakpoint.laptop}){
     width:80%;
@@ -55,22 +55,19 @@ height: 48px;
 export const ContainerWarp = styled.div`
 display: flex;
 flex-direction: row;
-align-items: center;
+align-items: start;
 justify-content: space-between;
-@media (min-width: ${({ theme }) => theme.breakpoint.mobileM}) and 
-      (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+@media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
         display: flex;
         flex-direction: column;
         width: 100%;
 
+      }
 
-      }
-      @media (min-width: ${({ theme }) => theme.breakpoint.laptop}) {
+`; 
+export const ContainerWarpTwo = styled(ContainerWarp)`
+align-items: center;
 
-      }
-      @media (min-width: ${({ theme }) => theme.breakpoint.desktop}) {
-    
-      }
 `; 
 export const Discord = styled.span`
   display: flex;
@@ -103,20 +100,33 @@ export const subTitleDiscord = styled.h2`
   flex-direction: row;
   gap: 15px;
   align-items: center;
-  text-align:center;
-  justify-content: center;
+  text-align:left;
+  justify-content: start;
   color: ${({ theme }) => theme.colors.neutral100};
   font-size: 2.5rem;
   ${({ theme }) =>
     css`
       ${theme.typography.archivo600}
     `}
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileLG}) {
-        width: 100%;
-        font-size: 2.2rem;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+      width: 100%;
+      text-align:center;
+
 
       }
 `;
+export const subTitleWhatsApp = styled(subTitleDiscord)`
+  display: flex;
+  justify-content: end;
+  text-align:right;
+  width: 100%;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+      text-align:center;
+
+
+      }
+`; 
 export const SubTitleQR = styled(subTitleDiscord)`
   text-align: center;
   font-size:2.25rem;
@@ -131,28 +141,50 @@ export const TextBodyDiscord = styled.span`
   font-size: 1.25rem;
   margin-top: 15px;
 margin-bottom: 40px;
-text-align: justify;
+text-align: left;
   color: ${({ theme }) => theme.colors.neutral100};
   ${({ theme }) =>
     css`
       ${theme.typography.hind300}
     `}
-`;
-export const QrCode = styled.aside`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 50%;
-  height: 50%;
-  gap: 20px;
-  @media (min-width: ${({ theme }) => theme.breakpoint.mobileM}) and 
-      (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-        display: none;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+
+      text-align:justify;
 
 
       }
 `;
+export const TextBodyWhatsApp  = styled(TextBodyDiscord)`
+text-align: right;
+@media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+
+      text-align:justify;
+
+
+      }
+
+`; 
+export const QrCode = styled.aside`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+        display: none;
+      }
+`;
+export const ContainerQrCode = styled.div`
+display: flex;
+flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 50%;
+  gap: 20px;
+  margin-top: 5%;
+`; 
 export const WhatsApp = styled.aside`
   display: flex;
   flex-direction: column;
@@ -160,8 +192,7 @@ export const WhatsApp = styled.aside`
   width: 50%;
   height: 50%;
 align-items: start;
-@media (min-width: ${({ theme }) => theme.breakpoint.mobileM}) and 
-      (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+@media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
         display: none;
 
 
@@ -171,9 +202,12 @@ export const PhoneImage = styled.img`
   width: 90%;
   object-fit: contain;
   -webkit-user-drag: none;
+  max-width: 500px;
 `;
 export const QR = styled(PhoneImage)`
-  width: 40%;
+  width: 70%;
+  max-width: 300px;
+
 `;
 export const Community = styled.aside`
  display: flex;
@@ -181,12 +215,7 @@ export const Community = styled.aside`
   justify-content: space-evenly;
   width: 50%;
   height: 50%;
-align-items: center;
-@media (min-width: ${({ theme }) => theme.breakpoint.mobileM}) and 
-      (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-
+@media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
         width: 100%;
-
-
       }
 `;

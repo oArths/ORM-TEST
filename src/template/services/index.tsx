@@ -2,12 +2,13 @@ import * as S from "./styles.tsx";
 import * as I from "lucide-react";
 import { useThemes } from "../../theme/useThema.tsx";
 import { useState } from "react";
+import React from "react";
 
 export const Services = () => {
   const { currentTheme, theme } = useThemes();
   const data = [
     {
-      id: '1',
+      id: "1",
       type: true,
       title: "WorkShop",
       iconName: "Presentation",
@@ -15,7 +16,7 @@ export const Services = () => {
         "Conheça nossos serviços, nossa história e o nosso ecossistema. Conheça nossos serviços, nossa história e o nosso ecossistema.Conheça nossos serviços, nossa história e o nosso ecossistema.",
     },
     {
-      id: '2',
+      id: "2",
       type: false,
       title: "Eventos Culturais",
       iconName: "Leaf",
@@ -23,7 +24,7 @@ export const Services = () => {
         "Conheça nossos serviços, nossa história e o nosso ecossistema. Conheça nossos serviços, nossa história e o nosso ecossistema.Conheça nossos serviços, nossa história e o nosso ecossistema.",
     },
     {
-      id: '3',
+      id: "3",
       type: true,
       title: "Parcerias",
       iconName: "Handshake",
@@ -31,7 +32,7 @@ export const Services = () => {
         "Conheça nossos serviços, nossa história e o nosso ecossistema. Conheça nossos serviços, nossa história e o nosso ecossistema.Conheça nossos serviços, nossa história e o nosso ecossistema.",
     },
     {
-      id: '4',
+      id: "4",
       type: false,
       title: "Apadrinhamento",
       iconName: "HandHeart",
@@ -39,7 +40,7 @@ export const Services = () => {
         "Conheça nossos serviços, nossa história e o nosso ecossistema. Conheça nossos serviços, nossa história e o nosso ecossistema.Conheça nossos serviços, nossa história e o nosso ecossistema.",
     },
     {
-      id: '5',
+      id: "5",
       type: true,
       title: "Lorem Lorem",
       iconName: "Trophy",
@@ -47,11 +48,12 @@ export const Services = () => {
         "Conheça nossos serviços, nossa história e o nosso ecossistema. Conheça nossos serviços, nossa história e o nosso ecossistema.Conheça nossos serviços, nossa história e o nosso ecossistema.",
     },
     {
-      id: '6',
+      id: "6",
       type: false,
       title: "Lorem Lorem",
       iconName: "Coffee",
-      textBody:"Conheça nossos serviços, nossa história e o nosso ecossistema. Conheça nossos serviços, nossa história e o nosso ecossistema.Conheça nossos serviços, nossa história e o nosso ecossistema.",
+      textBody:
+        "Conheça nossos serviços, nossa história e o nosso ecossistema. Conheça nossos serviços, nossa história e o nosso ecossistema.Conheça nossos serviços, nossa história e o nosso ecossistema.",
     },
   ];
   const [visibleTextBodies, setVisibleTextBodies] = useState({});
@@ -59,17 +61,17 @@ export const Services = () => {
   const handleIconClick = (id) => {
     setVisibleTextBodies((prevState) => ({
       ...prevState,
-      [id]: !prevState[id], 
+      [id]: !prevState[id],
     }));
   };
   return (
     <S.Section>
-      <S.ServicesHeader >
+      <S.ServicesHeader>
         <S.Title>
           <S.bar />
           SERVIÇOS DA SUPORTE
         </S.Title>
-        <S.subTitle>Serviços ofertados</S.subTitle>
+        <S.subTitleHeader>Serviços ofertados</S.subTitleHeader>
         <S.TextBody>
           Conheça nossos serviços, nossa história e o nosso ecossistema. Conheça
           nossos serviços, nossa história e o nosso ecossistema. Conheça nossos
@@ -80,88 +82,99 @@ export const Services = () => {
         {data &&
           data.map((Data, index) => {
             const IconComponent = I[Data.iconName];
-           
+
             const isEvenRow = Math.floor(index / 2) % 2 === 0;
             const isOddItem = index % 2 !== 0;
             const iconColor = isEvenRow
-                ? isOddItem
-                  ? currentTheme.colors.blue500
-                  : currentTheme.colors.blue900
-                : isOddItem
-                ? currentTheme.colors.blue900
-                : currentTheme.colors.blue500;
-            const backgroundColor =
-              isEvenRow
-                ? isOddItem
-                  ? false
-                  : true
-                : isOddItem
-                ? true
-                : false;
+              ? isOddItem
+                ? currentTheme.colors.blue500
+                : currentTheme.colors.blue900
+              : isOddItem
+              ? currentTheme.colors.blue900
+              : currentTheme.colors.blue500;
+            const backgroundColor = isEvenRow
+              ? isOddItem
+                ? false
+                : true
+              : isOddItem
+              ? true
+              : false;
 
             return (
-              <>
-                <S.cellServices id={Data.id} key={index} $CurrentTheme={theme} onClick={() => handleIconClick(Data.id)}>
-                 <S.TitleWarp>
-                  <S.TitleCard>
-                    <S.ContainerIconBlack $color={backgroundColor}>
-                      {IconComponent && (
-                        <IconComponent
-                          size={32}
-                          color={iconColor}
-                        />
-                      )}
-                    </S.ContainerIconBlack>
-                    {Data.title}
-                      </S.TitleCard>
-                    <S.IconWarp $isVisible={visibleTextBodies[Data.id]} >
+              <React.Fragment key={Data.id}>
+                <S.cellServices
+                  id={Data.id}
+                  key={`${index}-desktop`}
+                  $CurrentTheme={theme}
+                  onClick={() => handleIconClick(Data.id)}
+                >
+                  <S.TitleWarp>
+                    <S.TitleCard>
+                      <S.ContainerIconBlack $color={backgroundColor}>
+                        {IconComponent && (
+                          <IconComponent size={32} color={iconColor} />
+                        )}
+                      </S.ContainerIconBlack>
+                      {Data.title}
+                    </S.TitleCard>
+                    <S.IconWarp $isVisible={visibleTextBodies[Data.id]}>
                       <I.ChevronDown
                         size={32}
                         color={currentTheme.colors.neutral100}
                       />
                     </S.IconWarp>
-                 </S.TitleWarp>
-                  <div style={{overflow: 'hidden', padding: '0px 4px 4px 4px'}}>
-                  <S.TextBodyWarp $isVisible={visibleTextBodies[Data.id]}>
-                  <S.TextBody>{Data.textBody}</S.TextBody>
-                  </S.TextBodyWarp>
+                  </S.TitleWarp>
+                  <div
+                    style={{ overflow: "hidden", padding: "0px 4px 4px 4px" }}
+                  >
+                    <S.TextBodyWarp $isVisible={visibleTextBodies[Data.id]}>
+                      <S.TextBody>{Data.textBody}</S.TextBody>
+                    </S.TextBodyWarp>
                   </div>
                 </S.cellServices>
 
-
-
-                <S.cellServicesMobile id={Data.id} key={index} $CurrentTheme={theme} onClick={() => handleIconClick(Data.id)}>
-                 <S.TitleWarp>
-                  <S.TitleCard>
-                    <S.ContainerIconBlack $color={Data.type}>
-                      {IconComponent && (
-                        <IconComponent
-                          size={32}
-                          color={Data.type === true ? currentTheme.colors.blue900 : currentTheme.colors.blue500 }
-                        
-                        />
-                      )}
-                    </S.ContainerIconBlack>
-                    {Data.title}
-                      </S.TitleCard>
-                    <S.IconWarp $isVisible={visibleTextBodies[Data.id]} >
+                <S.cellServicesMobile
+                  id={Data.id}
+                  key={`${index}-mobile`}
+                  $CurrentTheme={theme}
+                  onClick={() => handleIconClick(Data.id)}
+                >
+                  <S.TitleWarp>
+                    <S.TitleCard>
+                      <S.ContainerIconBlack $color={Data.type}>
+                        {IconComponent && (
+                          <IconComponent
+                            size={32}
+                            color={
+                              Data.type === true
+                                ? currentTheme.colors.blue900
+                                : currentTheme.colors.blue500
+                            }
+                          />
+                        )}
+                      </S.ContainerIconBlack>
+                      {Data.title}
+                    </S.TitleCard>
+                    <S.IconWarp $isVisible={visibleTextBodies[Data.id]}>
                       <I.ChevronDown
                         size={32}
                         color={currentTheme.colors.neutral100}
                       />
                     </S.IconWarp>
-                 </S.TitleWarp>
-                  <div style={{overflow: 'hidden', padding: '0px 4px 4px 4px'}}>
-                  <S.TextBodyWarp $isVisible={visibleTextBodies[Data.id]}>
-                  <S.TextBody>{Data.textBody}</S.TextBody>
-                  </S.TextBodyWarp>
+                  </S.TitleWarp>
+                  <div
+                    style={{ overflow: "hidden", padding: "0px 4px 4px 4px" }}
+                  >
+                    <S.TextBodyWarp $isVisible={visibleTextBodies[Data.id]}>
+                      <S.TextBody>{Data.textBody}</S.TextBody>
+                    </S.TextBodyWarp>
                   </div>
                 </S.cellServicesMobile>
-                </>
+              </React.Fragment>
             );
           })}
       </S.ServicesContainer>
-          <S.Id id='Ecossistema'></S.Id>
+      <S.Id id="Ecossistema"></S.Id>
     </S.Section>
   );
 };

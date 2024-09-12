@@ -40,7 +40,7 @@ export const Services = styled.span`
   width: 100%;
 `;
 export const Id = styled.div`
-margin-bottom: 179px;
+margin-bottom: 80px;
 
 `; 
 export const ServicesContainer = styled(ContainerServices)`
@@ -119,6 +119,26 @@ export const Title = styled.h2`
     css`
       ${theme.typography.archivo500}
     `}
+`;
+export const subTitleHeader = styled.h2`
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.neutral100};
+  font-size: 2.5rem;
+  width: 100%;
+
+  ${({ theme }) =>
+    css`
+      ${theme.typography.archivo600}
+    `}
+  @media (max-width : ${({ theme }) => theme.breakpoint.mobileG}) {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
 `;
 export const subTitle = styled.h2`
   display: flex;

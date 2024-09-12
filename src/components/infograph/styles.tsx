@@ -64,6 +64,8 @@ export const Logo = styled(Red)`
 export const LogoImage = styled.img`
   width: 60%;
   object-fit: contain;
+    -webkit-user-drag: none;
+
 `;
 export const ContainerBar = styled.div`
   display: flex;
@@ -248,8 +250,8 @@ export const BarLeft = styled.div`
   justify-content: end;
   height: ${px2vw(70)};
   width: ${px2vw(217)};
-  border-top-right-radius: ${px2vw(45)};
-  border-bottom-right-radius: ${px2vw(45)};
+  border-top-right-radius: ${px2vw(50)};
+  border-bottom-right-radius: ${px2vw(50)};
   background-color: ${({ theme }) => theme.colors.green500};
 `;
 export const BarLeftYellow = styled(BarLeft)`
@@ -260,8 +262,8 @@ export const BarRightBlue = styled(BarLeft)`
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   justify-content: start;
-  border-top-left-radius: ${px2vw(45)};
-  border-bottom-left-radius: ${px2vw(45)};
+  border-top-left-radius: ${px2vw(50)};
+  border-bottom-left-radius: ${px2vw(50)};
   background-color: ${({ theme }) => theme.colors.blue550};
 `;
 
@@ -269,40 +271,28 @@ export const BarRightRed = styled(BarRightBlue)`
   width: ${px2vw(270)};
   background-color: ${({ theme }) => theme.colors.red500};
 `;
-export const Number = styled.p`
+export const NumberLeft = styled.p`
   display: flex;
-  align-items: center;
-  margin: 7px;
+  margin-left: 10px;
+  align-items: baseline;
   text-align: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.white900};
-  width: ${px2vw(60)};
-  height: ${px2vw(60)};
+  width: ${px2vw(55)};
+  height: ${px2vw(55)};
   border-radius: 50%;
-  font-size: clamp(1.8rem,3.5vw,4.2rem);
-  /* font-size: 1.8rem; */
-  /* @media (min-width: ${({ theme }) => theme.breakpoint.mobileL}) and 
-  (max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-  font-size: 1.5rem;
-  }
-  
-  @media (min-width: ${({ theme }) => theme.breakpoint.tabletM})
-  and (max-width: ${({ theme }) => theme.breakpoint.laptopM}) {
-    font-size: 2.2rem;
-  }
-  @media (min-width: ${({ theme }) => theme.breakpoint.laptopM})
-  and (max-width: ${({ theme }) => theme.breakpoint.desktopM}) {
-    font-size: 3.2rem;
-  }
-  @media (min-width: ${({ theme }) => theme.breakpoint.desktopM}) {
-    font-size: 4.2rem;
-  } */
-  
+  font-size: clamp(1.8rem,3.3vw,4.2rem);
   ${({ theme }) =>
     css`
       ${theme.typography.number900}
     `}
+    line-height: 1.6;
 `;
+export const NumberRight = styled(NumberLeft)`
+  margin-left: 0px;
+  margin-right: 10px;
+
+`; 
 export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;

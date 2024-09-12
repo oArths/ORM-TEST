@@ -67,17 +67,17 @@ export const Footer = () => {
             </S.Column>
             <S.Column>
               <S.ContainerText>
-                <S.Title>Connect</S.Title>
-                <S.SubTitleLink href="#Contato">Contato</S.SubTitleLink>
-                <S.SubTitle>Contrate nossos devs</S.SubTitle>
-              </S.ContainerText>
-            </S.Column>
-            <S.Column>
-              <S.ContainerText>
                 <S.Title>Sobre</S.Title>
                 <S.SubTitleLink href="#QuemSomos">História</S.SubTitleLink>
                 <S.SubTitleLink href="#Valores">Motivos & Valores</S.SubTitleLink>
                 <S.SubTitleLink href="#Ecossistema">Empresa como Hub</S.SubTitleLink>
+              </S.ContainerText>
+            </S.Column>
+            <S.Column>
+              <S.ContainerText>
+                <S.Title>Connect</S.Title>
+                <S.SubTitleLink href="#Contato">Contato</S.SubTitleLink>
+                <S.SubTitle>Contrate nossos devs</S.SubTitle>
               </S.ContainerText>
             </S.Column>
           </S.SectionWarpOne>
@@ -89,10 +89,10 @@ export const Footer = () => {
                 href="https://wa.me/5511949963686?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
                 target="_blank"
               >
-                <S.WhatsApp alt="Icone do WhatsApp" src={WhatsApp} /> (11) 9 1234-5678
+                <S.WhatsApp alt="Icone do WhatsApp" src={WhatsApp} /> (11) 94996-3686
               </S.SubTitleLink>
               <S.SubTitleLink
-                href="mailto:suportededomingo@email.com?subject=Solicitação%20de%20Informações&body=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços."
+                href="mailto:suportededomingo@outlook.com?subject=Solicitação%20de%20Informações&body=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços."
                 target="_blank"
               >
                 <I.Mail
@@ -100,7 +100,7 @@ export const Footer = () => {
                   size={15}
                   color={currentTheme.colors.gray1000}
                 />{" "}
-                suportededomingo@email.com
+                suportededomingo@outlook.com
               </S.SubTitleLink>
             </S.ContainerTextTow>
 
@@ -144,7 +144,6 @@ export const Footer = () => {
               <S.ErrorWarp>
                 {errors.email && <S.Error>{errors.email.message}</S.Error>}
               </S.ErrorWarp>
-            </S.ContainerText>
             <S.ButtonWarp>
               <ButtonDefault
                 title="Registrar-se"
@@ -158,10 +157,11 @@ export const Footer = () => {
                 type="submit"
               />
             </S.ButtonWarp>
+            </S.ContainerText>
           </S.SectionWarpThree>
           <S.SectionWarpFour>
             <S.ContainerTextFour>
-              <S.Title>Sobre</S.Title>
+              <S.Title>Explore</S.Title>
               <S.SubTitleLink href="#Sevicos">Nossos Serviços</S.SubTitleLink>
               <S.SubTitleLink href="#Contato">Contato</S.SubTitleLink>
               <S.SubTitleLink href="#QuemSomos">História</S.SubTitleLink>

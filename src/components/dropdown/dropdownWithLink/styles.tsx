@@ -29,7 +29,7 @@ export const visible = styled.div`
     z-index: 10;
   }
 `;
-export const OptionConteiner = styled.nav`
+export const OptionContainer = styled.nav`
   display: flex;
   margin-top: 50px;
   flex-direction: column;
@@ -46,9 +46,9 @@ export const Option = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 120px;
+  width: 100%;
   height: 18px;
-  padding: 10px 20px;
+  padding: 20px;
   font-size: 0.75rem;
   user-select: none;
   gap: 5px;
