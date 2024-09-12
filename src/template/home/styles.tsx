@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { backgroundLine, backgroundMobile } from "@assets/index.tsx";
+import { backgroundLine, backgroundLineMobile } from "@assets/index.tsx";
 export const Home = styled.section`
   flex-direction: column;
   display: flex;
@@ -47,7 +47,7 @@ export const Container = styled.span`
   background-size: contain;
   @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
     flex-direction: column;
-    background-image: url(${backgroundMobile});
+    background-image: url(${backgroundLineMobile});
   }
   @media (min-width: ${({ theme }) =>theme.breakpoint.MobileGG}) 
   and (max-width: ${({ theme }) =>theme.breakpoint.tabletM}) {

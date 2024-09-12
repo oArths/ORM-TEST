@@ -2,6 +2,7 @@ export { default as Phone } from './Images/phone.webp'
 export { default as React } from './Images/react.svg'
 export { default as Sdd } from './Images/Sdd.svg'
 export { default as QR } from './Images/QR.png'
+export { default as backGoundMobile } from './Images/backGoundMobile.webp'
 export { default as SddDark } from './Images/SddDark.svg'
 export { default as Dino } from './Images/Dino.webp'
 export { default as Traced } from './Images/Traced.webp'
@@ -26,7 +27,7 @@ export { default as jacket  } from './Images/Jacket Boy.svg'
 export { default as beanie  } from './Images/Beanie Boy.svg'
 export { default as beaded  } from './Images/Beaded Guy.svg'
 export { default as backgroundLine  } from './Images/backgroundLine.svg'
-export { default as backgroundMobile  } from './Images/backgroundMobile.svg'
+export { default as backgroundLineMobile  } from './Images/BackgroundLineMobile.svg'
 
 
 
