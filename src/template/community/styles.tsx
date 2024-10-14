@@ -13,62 +13,57 @@ export const ContainerCommunity = styled.div`
   height: auto;
   gap: 40px;
   margin-bottom: 80px;
-  @media (min-width : ${({ theme }) => theme.breakpoint.laptop}){
-    width:80%;
+  @media (min-width: ${({ theme }) => theme.breakpoint.laptop}) {
+    width: 80%;
   }
 `;
 
 export const ButtonContainerLeft = styled.div`
-display: flex;
-flex-direction:row;
-align-items: center;
-justify-content:left;
-width: 100%;
-
-`; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+`;
 export const ButtonContainerRight = styled.div`
-display: flex;
-flex-direction:row;
-align-items: center;
-justify-content:right;
-width: 100%;
-
-`; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+`;
 export const ButtonWarp = styled.a`
-display: flex;
-flex-direction:row;
-text-decoration: none;
-width: 100%;
-height: 48px;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  width: 100%;
+  height: 48px;
 
-
-@media (min-width : ${({ theme }) => theme.breakpoint.mobileG}){
-    width:80%;
+  @media (min-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+    width: 80%;
     height: 45px;
   }
-@media (min-width : ${({ theme }) => theme.breakpoint.tabletM}){
-    width:80%;
+  @media (min-width: ${({ theme }) => theme.breakpoint.tabletM}) {
+    width: 80%;
     height: 70px;
   }
-`; 
+`;
 
 export const ContainerWarp = styled.div`
-display: flex;
-flex-direction: row;
-align-items: start;
-justify-content: space-between;
-@media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-      }
-
-`; 
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+`;
 export const ContainerWarpTwo = styled(ContainerWarp)`
-align-items: center;
-
-`; 
+  align-items: center;
+`;
 export const Discord = styled.span`
   display: flex;
   flex-direction: column;
@@ -76,8 +71,8 @@ export const Discord = styled.span`
   width: 50%;
   height: 50%;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-        width: 100%;
-      }
+    width: 100%;
+  }
 `;
 export const titleDiscord = styled.h2`
   display: flex;
@@ -93,45 +88,46 @@ export const titleDiscord = styled.h2`
     css`
       ${theme.typography.archivo500}
     `}
-  
+ 
+  @media (min-width: ${({ theme }) =>theme.breakpoint.MobileGG}) 
+  and (max-width: ${({ theme }) =>theme.breakpoint.laptop}) {
+    border-top: 0.65px solid ${({ theme }) => theme.colors.neutral100};
+    
+  }
 `;
 export const subTitleDiscord = styled.h2`
   display: flex;
   flex-direction: row;
   gap: 15px;
   align-items: center;
-  text-align:left;
+  text-align: left;
   justify-content: start;
   color: ${({ theme }) => theme.colors.neutral100};
   font-size: 2.5rem;
   ${({ theme }) =>
     css`
-      ${theme.typography.archivo600}
+      ${theme.typography.archivo500}
     `}
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-      width: 100%;
-      text-align:center;
-
-
-      }
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 export const subTitleWhatsApp = styled(subTitleDiscord)`
   display: flex;
   justify-content: end;
-  text-align:right;
+  text-align: right;
   width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-      text-align:center;
-
-
-      }
-`; 
+    text-align: center;
+  }
+`;
 export const SubTitleQR = styled(subTitleDiscord)`
   text-align: center;
-  font-size:2.25rem;
+  font-size: 2.25rem;
   height: 60px;
-`; 
+`;
 export const bar = styled.div`
   width: 5px;
   height: 25px;
@@ -140,30 +136,23 @@ export const bar = styled.div`
 export const TextBodyDiscord = styled.span`
   font-size: 1.25rem;
   margin-top: 15px;
-margin-bottom: 40px;
-text-align: left;
+  margin-bottom: 40px;
+  text-align: left;
   color: ${({ theme }) => theme.colors.neutral100};
   ${({ theme }) =>
     css`
       ${theme.typography.hind300}
     `}
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-
-      text-align:justify;
-
-
-      }
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+    text-align: justify;
+  }
 `;
-export const TextBodyWhatsApp  = styled(TextBodyDiscord)`
-text-align: right;
-@media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-
-      text-align:justify;
-
-
-      }
-
-`; 
+export const TextBodyWhatsApp = styled(TextBodyDiscord)`
+  text-align: right;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+    text-align: justify;
+  }
+`;
 export const QrCode = styled.aside`
   display: flex;
   flex-direction: column;
@@ -172,50 +161,47 @@ export const QrCode = styled.aside`
   width: 50%;
   height: 50%;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-        display: none;
-      }
+    display: none;
+  }
 `;
 export const ContainerQrCode = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
   height: 50%;
   gap: 20px;
   margin-top: 5%;
-`; 
+`;
 export const WhatsApp = styled.aside`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 50%;
   height: 50%;
-align-items: start;
-@media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-        display: none;
-
-
-      }
+  align-items: start;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+    display: none;
+  }
 `;
 export const PhoneImage = styled.img`
-  width: 90%;
+  width: 70%;
   object-fit: contain;
   -webkit-user-drag: none;
   max-width: 500px;
-`;
+  `;
 export const QR = styled(PhoneImage)`
-  width: 70%;
-  max-width: 300px;
+max-width: 450px;
 
 `;
 export const Community = styled.aside`
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 50%;
   height: 50%;
-@media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-        width: 100%;
-      }
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+    width: 100%;
+  }
 `;

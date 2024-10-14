@@ -6,14 +6,13 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  z-index: 20;
+  z-index: 10;
   width: 100%;
   height: 80px;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra interna */
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
   background-color: ${({ theme }) => theme.colors.neutral800};
   @media (max-width: ${({ theme }) => theme.breakpoint.laptop}) {
     justify-content: space-between;
-
   }
 `;
 export const Logo = styled.img`
@@ -23,11 +22,9 @@ export const Logo = styled.img`
   -webkit-user-drag: none;
   user-select: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.laptop}) {
-  margin-left: 20px;
-  user-select: none;
-  -webkit-user-drag: none;
-
-
+    margin-left: 20px;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 `;
 export const Nav = styled.nav`
@@ -36,7 +33,10 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: center;
   width: 60%;
-  gap: 45px;
+  @media (min-width: 1000px)and (max-width: 1324px){
+    gap: 10px;
+    justify-content: space-around;
+  }
   @media (max-width: ${({ theme }) => theme.breakpoint.laptop}) {
     display: none;
   }
@@ -53,28 +53,33 @@ export const ContainerMenu = styled.nav`
   }
 `;
 export const MenuWrap = styled.div`
- cursor: pointer;
+  cursor: pointer;
 `;
 export const ButtonWarp = styled.a`
-text-decoration: none;
-`; 
+  text-decoration: none;
+`;
 export const Option = styled.a`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 1rem;
   gap: 5px;
+  width: 150px;
   color: ${({ theme }) => theme.colors.neutral100};
   cursor: pointer;
   ${({ theme }) => css`
-    ${theme.typography.archivo600}
+    ${theme.typography.archivo500}
   `}
+  @media (min-width: 1000px)and (max-width: 1324px) {
+  font-size: 0.9rem;
+    width: 100px;
+  }
 `;
 export const LinkButton = styled.a`
-text-decoration: none;
-width: 143px;
-height: 41px;
-`; 
+  text-decoration: none;
+  width: 143px;
+  height: 41px;
+`;
 export const ContainerButton = styled.div`
   display: flex;
   flex-direction: row;

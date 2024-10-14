@@ -17,10 +17,12 @@ export const IdSection = styled.div`
 
 export const ContainerAboutUs = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 80px;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  border-top: 1px solid ${({ theme }) => theme.colors.neutral100};
   width: 90%;
-  height: auto;
+  height: 100%;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
     margin-bottom: 80px;
@@ -33,7 +35,6 @@ export const ContainerAboutUs = styled.div`
 export const AboutUsWarp = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: start;
   justify-content: space-between;
   border-top: 1px solid ${({ theme }) => theme.colors.neutral100};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
@@ -41,18 +42,7 @@ export const AboutUsWarp = styled.div`
     flex-direction: column;
   }
 `;
-export const AboutUsWarpMobile = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: space-between;
-  border-top: 1px solid ${({ theme }) => theme.colors.neutral100};
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-    flex-direction: column;
-    border-top: none;
-  }
-`;
 export const AboutUs = styled.span`
   display: flex;
   flex-direction: column;
@@ -61,9 +51,48 @@ export const AboutUs = styled.span`
   justify-content: end;
   align-items: start;
   gap: 20px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletM}) {
     width: 100%;
   }
+`;
+export const WarpBodyText = styled.span`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: ${({ theme }) =>theme.breakpoint.MobileGG}) 
+  and (max-width: ${({ theme }) =>theme.breakpoint.tabletM}) {
+    flex-direction: row;
+    align-items: center;
+  }
+`;
+export const WarpContainer = styled.div`
+display: flex;
+justify-content: end;
+align-items: end;
+width: 49%;
+height: 100%;
+`;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: auto;
+  justify-content: end;
+  align-items: end;
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletM}) {
+    display: none;
+  }
+`;
+export const Image = styled.img`
+  -webkit-user-drag: none;
+  object-fit: contain;
+  object-position: bottom;
+  width: 100%;
 `;
 export const textWarp = styled.span`
   display: flex;
@@ -110,10 +139,14 @@ export const bar = styled.div`
 `;
 export const TextBody = styled.span`
   text-align: justify;
-  font-size: 1.25rem;
+  font-size: clamp(0.875rem, 1.9vw, 1.35rem);
+
   color: ${({ theme }) => theme.colors.neutral100};
   ${({ theme }) =>
     css`
       ${theme.typography.hind300}
     `}
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletM}) {
+    font-size: 1rem;
+  }
 `;

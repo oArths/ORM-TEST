@@ -7,6 +7,7 @@ export const themes = {
       neutral900: "#F8F9FA",
       green500: "#34C759",
       yellow500: "#FFCC00",
+      white: "#F8F9FA",
       violet500: "#975BCF",
       red500: "#FF3B30",
 
@@ -53,6 +54,7 @@ export const themes = {
       neutral900: "#23272E",
       green500: "#34C759",
       yellow500: "#FFCC00",
+      white: "#F8F9FA",
       violet500: "#975BCF",
       red500: "#FF3B30",
 
@@ -220,9 +222,9 @@ export const themes = {
     mobileL: "425px",
     mobileLG: "500px",
     mobileG: "595px",
-    MobileGG: '630px',
+    MobileGG: "630px",
     tablet: "768px",
-    tabletM: '970px',
+    tabletM: "970px",
     laptop: "1024px",
     laptopM: "1200px",
     desktop: "1280px",
@@ -233,3 +235,8 @@ export const themes = {
     desktopX: "2080px",
   },
 };
+// 1 width: 750px; height: 1334px;
+// 2: width: 1290px; height: 2796px;
+// 3: width: 2048px; height: 2732px;
+// 4:  width: 2560px; height: 1600px;
+// 5: width: 3840px; height: 2160px;

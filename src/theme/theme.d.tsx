@@ -7,10 +7,11 @@ declare module "styled-components" {
       neutral200: string;
       neutral800: string;
       neutral900: string;
-      green500: string,
-      yellow500: string,
-      violet500: string,
-      red500 : string,
+      green500: string;
+      yellow500: string;
+      white: string;
+      violet500: string;
+      red500: string;
 
       blue100: string;
       blue200: string;

@@ -21,9 +21,11 @@ export const SectionEco = styled.div<ITema>`
   align-items: center;
   width: 100%;
   height: 100%;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 40px;
+  margin-bottom:80px;
 `;
 
 export const bar = styled.div`
@@ -43,9 +45,17 @@ export const ServicesHeader = styled.div`
     width:80%;
   }
 `;
-export const ServicesContact = styled(ServicesHeader)`
+export const ServicesContact = styled.div`
   margin-bottom: 45px;
   margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 50%;
+  gap: 20px;
+  @media (min-width : ${({ theme }) => theme.breakpoint.laptop}){
+    width:80%;
+  }
 `;
 
 export const Services = styled.span`

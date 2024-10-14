@@ -18,16 +18,18 @@ export default function Header() {
     },
   ];
   const EcoData = [
-    { link: "", name: "Nouveau" },
-    { link: "", name: "Stack Overflow" },
-    { link: "", name: "Education" },
+    { link: "/", name: "em Breve..." },
+    { link: "/", name: "em Breve..." },
+    { link: "/", name: "em Breve..." },
   ];
   const SerData = [
-    { link: "Workshops", name: "Workshops" },
-    { link: "Eventos Culturais", name: "Eventos Culturais" },
-    { link: "Apadrinhamento", name: "Apadrinhamento" },
-    { link: "Parcerias", name: "Parcerias" },
+    { link: "/", name: "Workshops" },
+    { link: "/", name: "Desenvolvimento" },
+    { link: "/", name: "Design" },
+    { link: "/", name: "Parcerias" },
+    { link: "/", name: "Educação" },
   ];
+
   return (
     <S.Header>
       <S.Logo
@@ -37,8 +39,8 @@ export default function Header() {
       <S.Nav>
         <S.Option href="#inicio">Início</S.Option>
         <S.Option href="#QuemSomos">Quem Somos</S.Option>
-        <S.Option href="#Sevicos">Serviços</S.Option>
-        <S.Option href="#Ecossistema">Ecossistema</S.Option>
+        <DropDownWithLink title="Serviços" data={SerData} />
+        <DropDownWithLink title="Ecossistema" data={EcoData} />
         <DropDownWithLink title="Comunidade" data={CunData} />
       </S.Nav>
       <S.ContainerMenu>

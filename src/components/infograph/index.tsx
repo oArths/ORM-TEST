@@ -13,16 +13,21 @@ export const InfoGraph = () => {
                     <S.Red>
                       <S.Container>
                         <S.Logo>
-                          <S.LogoImage alt="logo da suporte de domingo dentro de um grafico" src={Logo} />
+                          <S.LogoImage
+                            alt="logo da suporte de domingo dentro de um grafico"
+                            src={Logo}
+                          />
                         </S.Logo>
                       </S.Container>
                     </S.Red>
                     <S.ContainerBarRed>
                       <S.ContainerText>
-                        <S.Title>Education Focus</S.Title>
+                        <S.Title>Comunidade</S.Title>
                         <S.SubTitle>
-                          Conheça nossos serviços, nossa história e o nosso
-                          ecossistema. Conheça nossos
+                          Nossa Comunidade é o ponto de encontro para
+                          profissionais, entusiastas e iniciantes que buscam
+                          compartilhar conhecimento, trocar ideias e crescer
+                          juntos.
                         </S.SubTitle>
                       </S.ContainerText>
                       <S.BarRightRed>
@@ -33,10 +38,10 @@ export const InfoGraph = () => {
                 </S.Blue>
                 <S.ContainerBarBlue>
                   <S.ContainerText>
-                    <S.Title>Education Focus</S.Title>
+                    <S.Title>Educação</S.Title>
                     <S.SubTitle>
-                      Conheça nossos serviços, nossa história e o nosso
-                      ecossistema. Conheça nossos
+                      Atuamos em projetos sociais que promovem o acesso à
+                      tecnologia, transformando vidas e fortalecendo comunidades
                     </S.SubTitle>
                   </S.ContainerText>
                   <S.BarRightBlue>
@@ -52,8 +57,8 @@ export const InfoGraph = () => {
               <S.ContainerText>
                 <S.Title>Venda de Serviços</S.Title>
                 <S.SubTitle>
-                  Conheça nossos serviços, nossa história e o nosso ecossistema.
-                  Conheça nossos
+                  Oferecemos soluções personalizadas em tecnologia e design,
+                  ajudando empresas a crescerem com inovação e eficiência.
                 </S.SubTitle>
               </S.ContainerText>
             </S.ContainerBarYellow>
@@ -64,10 +69,11 @@ export const InfoGraph = () => {
             <S.NumberRight>04</S.NumberRight>
           </S.BarLeft>
           <S.ContainerText>
-            <S.Title>Comunidade do discord</S.Title>
+            <S.Title>Banco de Talentos</S.Title>
             <S.SubTitle>
-              Conheça nossos serviços, nossa história e o nosso ecossistema.
-              Conheça nossos
+              Nosso Banco de Talentos é um hub exclusivo onde empresas encontram
+              especialistas altamente qualificados em Design, Desenvolvimento,
+              Metodologias Ágeis e muito mais.
             </S.SubTitle>
           </S.ContainerText>
         </S.ContainerBar>
@@ -76,10 +82,10 @@ export const InfoGraph = () => {
         <S.ImageBackGound>
           <S.TextWarpMobile>
             <S.ContainerText>
-              <S.Title>1. Serviços Sociais</S.Title>
+              <S.Title>1.Workshops</S.Title>
               <S.SubTitle>
-                Conheça nossos serviços, nossa história e o nosso ecossistema.
-                Conheça nossos
+                Nossa missão é capacitar profissionais por meio de cursos e
+                workshops, preparando-os para os desafios do mercado digital.
               </S.SubTitle>
             </S.ContainerText>
             <S.ContainerText>
@@ -99,14 +105,13 @@ export const InfoGraph = () => {
               </S.SubTitle>
             </S.ContainerTextPosition>
             <S.ContainerTextPosition>
-              <S.Title>4. Comunidade do discord</S.Title>
+              <S.Title>4. Comunidade do Discord</S.Title>
               <S.SubTitle>
                 Conheça nossos serviços, nossa história e o nosso ecossistema.
                 Conheça nossos
               </S.SubTitle>
             </S.ContainerTextPosition>
           </S.TextWarpMobile>
-          
         </S.ImageBackGound>
       </S.ContainerMobile>
     </S.GraphWarp>

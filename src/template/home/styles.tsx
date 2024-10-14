@@ -1,214 +1,111 @@
 import styled, { css } from "styled-components";
-import { backgroundLine, backgroundLineMobile } from "@assets/index.tsx";
+
 export const Home = styled.section`
-  flex-direction: column;
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  margin-top: 80px;
-  width: 100%;
-  height: auto;
-  background-color: ${({ theme }) => theme.colors.blue500};
-  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    margin-bottom: 80px;
-    margin-top: 50px;
-  }
-`;
-export const HomeWarp = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-  height: 80vh;
-  background-color: ${({ theme }) => theme.colors.blue500};
-  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    height: 60vh;
-  }
-  @media (min-width: ${({ theme }) =>theme.breakpoint.MobileGG}) 
-  and (max-width: ${({ theme }) =>theme.breakpoint.tabletM}) {
-    height: 70vh;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    height: 88dvh;
-  }
-`;
-export const Container = styled.span`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 90%;
-  height: 100%;
-  margin: 20px 0px;
-  background-image: url(${backgroundLine});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    flex-direction: column;
-    background-image: url(${backgroundLineMobile});
-  }
-  @media (min-width: ${({ theme }) =>theme.breakpoint.MobileGG}) 
-  and (max-width: ${({ theme }) =>theme.breakpoint.tabletM}) {
-    width: 99%;
-  }
-  @media (min-width: ${({ theme }) => theme.breakpoint.laptop}) {
-    margin:0px;
-  }
-  @media (min-width: ${({ theme }) => theme.breakpoint.desktopG}) {
-    height: 90%;
+  margin-top: 80px;
+  width: 100%;
+  height: 60vh;
+  background-color: ${({ theme }) => theme.colors.blue500};
+  @media(max-width: ${({ theme }) =>theme.breakpoint.laptop}) {
+    height: auto;
+    padding: 10% 0;
   }
 `;
-
-export const WarpPerson = styled.div`
+export const IConn = styled.div`
+  width: 100%;
+  height: 50px;
+  background-color: ${({ theme }) => theme.colors.blue600};
+  border-bottom: 25px solid ${({ theme }) => theme.colors.blue700};
+  margin-bottom: 100px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
+    height: 24px;
+    border-bottom: 12px solid ${({ theme }) => theme.colors.blue700};
+    margin-bottom: 20px;
+  }
+  @media  (min-width: ${({ theme }) => theme.breakpoint.MobileGG}) 
+  and (max-width: ${({ theme }) => theme.breakpoint.laptop}) {
+    height: 30px;
+    border-bottom: 15px solid ${({ theme }) => theme.colors.blue700};
+    margin-bottom: 40px;
+  }
+`;
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 20%;
-  height: 100%;
-  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    flex-direction: row;
-    width: 100%;
-    height: 20%;
+  align-items: end;
+  justify-content: start;
+  width: 50%;
+  height: auto;
+  &:first-child {
+    @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
   }
-`;
-export const Person = styled.img`
-  object-fit: contain;
-  -webkit-user-drag: none;
-  max-width: 300px;
-  width: 100%;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileLG}) {
-    max-width: 120px;
-  }
-  @media ((min-width: ${({ theme }) =>theme.breakpoint.mobileLG})
-  and (max-width: ${({ theme }) =>theme.breakpoint.MobileGG})) {
-    max-width: 150px;
-  }
-  @media (min-width: ${({ theme }) => theme.breakpoint.desktopM}) {
-    width: 130%;
-  }
-  @media (min-width: ${({ theme }) => theme.breakpoint.desktopG}) {
-    width: 160%;
-    max-width: 300px;
-  }
-`;
-export const Person01 = styled(Person)`
-  position: relative;
-  top: 10%;
-`;
-export const Person02 = styled(Person)`
-  position: relative;
-  bottom: 10%;
-  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    display: none;
-  }
-`;
-export const Person02Mobile = styled(Person)`
-  position: relative;
-  bottom: 10%;
-  @media (min-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    display: none;
-  }
-`;
-export const Person03 = styled(Person)`
-  position: relative;
-  right: 40%;
-  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    display: none;
-  }
-`;
-export const Person03Mobile = styled(Person)`
-  position: relative;
-  top: -28%;
-  @media (min-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    display: none;
-  }
-`;
-export const Person04 = styled(Person)`
-  position: relative;
-  bottom: -18%;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileLG}) {
-    position: relative;
-    max-width: 150px;
-    right: -25%;
-    top: -15%;
-  }
-  @media (min-width: ${({ theme }) =>theme.breakpoint.mobileLG}) 
-  and (max-width: ${({ theme }) =>theme.breakpoint.MobileGG}) {
-    position: relative;
-    max-width: 200px;
-    right: -25%;
-    top: -15%;
-  }
-`;
-export const Person05 = styled(Person)`
-  position: relative;
-  right: 80%;
-  max-width: 250px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileG}) {
-    right: 30%;
-    bottom: -30%;
-    max-width: 160px;
+  &:last-child {
+    align-items: start;
 
+    @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
+      display: none;
+    }
   }
-  @media ((min-width: ${({ theme }) =>theme.breakpoint.mobileG})) 
-  and (max-width: ${({ theme }) =>theme.breakpoint.MobileGG}) {
-    right: 40%;
-    bottom: -20%;
-  }
+`;
+
+export const Image = styled.img`
+  object-fit: contain;
+  width: 85%;
+  object-position: center;
+  -webkit-user-drag: none;
 `;
 
 export const ContainerText = styled.span`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  width: 50%;
-  height: 100%;
-  position: relative;
-  z-index: 10;
-  gap: 20px;
+  width: 85%;
+  height: auto;
+  gap: 34px;
   @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    width: 100%;
-    height: 50%;
-  }
-`;
-export const Img = styled.img`
-  width: 100dvw;
-  background-color: ${({ theme }) => theme.colors.neutral900};
-  -webkit-user-drag: none;
-  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
-    object-fit: cover;
+    align-items: center;
+    gap: 25px;
+    div {
+      display: none;
+    }
   }
 `;
 
 export const centerText = styled.span`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  width: 100%;
+  @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
+    align-items: center;
+    text-align: center;
+  }
 `;
-export const title = styled.h1`
-  font-size: clamp(2rem, 3.5vw, 4.063rem);
-  color: ${({ theme }) => theme.colors.white900};
-  ${({ theme }) =>
-    css`
-      ${theme.typography.archivo900}
-    `}
-`;
-export const SubTitle = styled.h2`
-  font-size: clamp(2rem, 3.5vw, 4.063rem);
+
+export const title = styled.h2`
+  width: 100%;
+  font-size: clamp(1.8rem, 3.5vw, 4.063rem);
   color: ${({ theme }) => theme.colors.white900};
 
   ${({ theme }) =>
     css`
-      ${theme.typography.archivo300}
+      ${theme.typography.archivo500}
     `}
 `;
+
 export const bodyText = styled.span`
-  font-size: clamp(0.75rem, 2vw, 1.313rem);
-  text-align: center;
-  width: 400px;
+  width: 70%;
+  font-size: clamp(0.75rem, 2vw, 1.75rem);
+  text-align: left;
   color: ${({ theme }) => theme.colors.white900};
 
   ${({ theme }) =>
@@ -217,6 +114,7 @@ export const bodyText = styled.span`
     `}
   @media (max-width: ${({ theme }) => theme.breakpoint.MobileGG}) {
     width: 300px;
+    text-align: center;
   }
 `;
 export const ButtonWarp = styled.div`

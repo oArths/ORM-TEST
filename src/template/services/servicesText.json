@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "type": true,
+    "title": "WorkShop",
+    "iconName": "Presentation",
+    "textBody": "Impulsione o Potencial da Sua Equipe com Nossos Workshops Personalizados"
+  },
+  {
+    "id": "2",
+    "type": false,
+    "title": "Parcerias",
+    "iconName": "Handshake",
+    "textBody": "Colaborações estratégicas com empresas e profissionais, para entregar soluções completas e personalizadas."
+  },
+  {
+    "id": "3",
+    "type": true,
+    "title": "Design",
+    "iconName": "Paintbrush",
+    "textBody": "Criação de identidades visuais, interfaces e experiências digitais que conectam sua marca ao público de forma estratégica e envolvente."
+  },
+  {
+    "id": "4",
+    "type": false,
+    "title": "Educação",
+    "iconName": "GraduationCap",
+    "textBody": "Aulas particulares, cursos completos ou mentoria personalizada, para transformar seu aprendizado em uma experiência única e prática."
+  }
+]
