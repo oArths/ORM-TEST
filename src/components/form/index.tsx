@@ -53,7 +53,6 @@ export const Form = () => {
         templateParams,
         "vTcnOqeKlspsKk1rg"
       );
-      console.log("EMAIL ENVIADO", res.status, res.text);
       reset();
       setCount(0);
     } catch (err) {
@@ -74,7 +73,7 @@ export const Form = () => {
           id="name"
           name="name"
           autoComplete="name"
-          placeholder="Seu Nome"
+          placeholder="Suporte de Domingo"
           {...register("name")}
         />
         <S.ErrorWarp>
@@ -90,7 +89,7 @@ export const Form = () => {
           id="email"
           name="email"
           autoComplete="email"
-          placeholder="Seu Email"
+          placeholder="suportededomingo@outlook.com"
           {...register("email")}
         />
         <S.ErrorWarp>
@@ -105,7 +104,8 @@ export const Form = () => {
           id="message"
           name="message"
           autoComplete="off"
-          placeholder="Sua Duvida"
+          placeholder="Digite sua mensagem aqui:
+          "
           {...register("message")}
           onChange={(e) => {
             setCount(e.target.value.length);

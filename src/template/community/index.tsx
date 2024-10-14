@@ -14,12 +14,9 @@ export const Community = () => {
               <S.bar />
               NOSSAS COMUNIDADES
             </S.titleDiscord>
-            <S.subTitleDiscord>Suporte de domingo no Discord</S.subTitleDiscord>
+            <S.subTitleDiscord>Suporte de Domingo no Discord</S.subTitleDiscord>
             <S.TextBodyDiscord>
-              Conheça nossos serviços, nossa história e o nosso ecossistema.
-              Conheça nossos serviços, nossa história e o nosso
-              ecossistema.Conheça nossos serviços, nossa história e o nosso
-              ecossistema.
+            Conecte-se com nossa comunidade no Discord e colabore com outros entusiastas da tecnologia, assim como você!!
             </S.TextBodyDiscord>
             <S.ButtonContainerLeft>
               <S.ButtonWarp
@@ -44,7 +41,6 @@ export const Community = () => {
           </S.Discord>
           <S.QrCode>
             <S.ContainerQrCode>
-              <S.SubTitleQR>Ou entre pelo QR Code </S.SubTitleQR>
               <S.QR
                 alt="imagem de um QR code para acessar o discord"
                 src={QR}
@@ -55,7 +51,7 @@ export const Community = () => {
         <S.ContainerWarpTwo>
           <S.WhatsApp>
             <S.PhoneImage
-              alt="imagem De um celular com o WhatsApp do grupo da suporte de domingo"
+              alt="imagem De um celular com o WhatsApp do grupo da Suporte de Domingo"
               src={Phone}
             />
           </S.WhatsApp>
@@ -64,10 +60,7 @@ export const Community = () => {
               Grupo & Comunidade no WhatsApp
             </S.subTitleWhatsApp>
             <S.TextBodyWhatsApp>
-              Conheça nossos serviços, nossa história e o nosso ecossistema.
-              Conheça nossos serviços, nossa história e o nosso
-              ecossistema.Conheça nossos serviços, nossa história e o nosso
-              ecossistema.
+            Não perca nada: participe do nosso grupo no WhatsApp e receba atualizações em primeira mão e esteja sempre à frente com as últimas notícias.
             </S.TextBodyWhatsApp>
             <S.ButtonContainerRight>
               <S.ButtonWarp

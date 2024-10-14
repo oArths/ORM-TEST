@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
 export const InputContainer = styled.form`
   display: flex;
@@ -13,35 +13,33 @@ export const InputContainer = styled.form`
   }
 `;
 export const ButtonWarp = styled.div`
- display: flex;
- align-items: center;
- justify-content: center;
- width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
   margin-bottom: 100px;
   @media (min-width: ${({ theme }) => theme.breakpoint.laptop}) {
     display: flex;
- align-items: center;
- justify-content: left;
- width: 100%;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
   }
 `;
-export const ErrorWarp= styled.div`
-display: flex;
-align-items: end;
-height: 30px;
-width: 90%;
-@media (min-width: ${({ theme }) => theme.breakpoint.laptop}) {
+export const ErrorWarp = styled.div`
+  display: flex;
+  align-items: end;
+  height: 30px;
+  width: 90%;
+  @media (min-width: ${({ theme }) => theme.breakpoint.laptop}) {
     width: 100%;
-
   }
-
 `;
 export const Error = styled.p`
-display: flex;
-align-items: start;
-font-size: 1rem;
-width: 100%;
-color: ${({theme}) => theme.colors.red500};
+  display: flex;
+  align-items: start;
+  font-size: 1rem;
+  width: 100%;
+  color: ${({ theme }) => theme.colors.red500};
 `;
 export const LabelWarp = styled.aside`
   display: flex;
@@ -49,7 +47,6 @@ export const LabelWarp = styled.aside`
   width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoint.laptop}) {
     width: 90%;
-
   }
 `;
 
@@ -62,7 +59,7 @@ export const InputWrap = styled.span`
   gap: 7px;
 `;
 export const Label = styled.h1`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: ${({ theme }) => theme.colors.neutral100};
   ${({ theme }) =>
     css`
@@ -76,14 +73,14 @@ export const Input = styled.input`
   width: 100%;
   color: ${({ theme }) => theme.colors.white100};
   border: 1px solid ${({ theme }) => theme.colors.gray500};
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); 
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   &::placeholder {
     color: ${({ theme }) => theme.colors.gray300};
-    opacity: 1; 
+    opacity: 1;
   }
-&:-webkit-autofill {
+  &:-webkit-autofill {
     -webkit-text-fill-color: ${({ theme }) => theme.colors.white100};
-    -webkit-box-shadow: 0 0 0px 1000px #F8F9FA inset; 
+    -webkit-box-shadow: 0 0 0px 1000px #f8f9fa inset;
     transition: background-color 5000s ease-in-out 0s;
   }
   ${({ theme }) =>
@@ -106,16 +103,16 @@ export const TextArea = styled.textarea`
   max-height: 300px;
   field-sizing: content;
   resize: none;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); 
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   color: ${({ theme }) => theme.colors.white100};
   border: 1px solid ${({ theme }) => theme.colors.gray500};
   &::placeholder {
     color: ${({ theme }) => theme.colors.gray300};
-    opacity: 1; 
+    opacity: 1;
   }
-&:-webkit-autofill {
+  &:-webkit-autofill {
     -webkit-text-fill-color: ${({ theme }) => theme.colors.white100};
-    -webkit-box-shadow: 0 0 0px 1000px #F8F9FA inset; 
+    -webkit-box-shadow: 0 0 0px 1000px #f8f9fa inset;
     transition: background-color 5000s ease-in-out 0s;
   }
   ${({ theme }) =>
@@ -137,6 +134,5 @@ export const ContainerCont = styled.div`
   color: ${({ theme }) => theme.colors.neutral100};
   @media (min-width: ${({ theme }) => theme.breakpoint.laptop}) {
     width: 100%;
-
   }
 `;

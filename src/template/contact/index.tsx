@@ -1,22 +1,29 @@
 import * as S from "./styles.tsx";
-import {
-  ContactIllustration,
-  ContactIllustrationBlack,
-} from "../../assets/index.tsx";
-import { useThemes } from "src/theme/useThema.tsx";
+import { ContactIllustration } from "../../assets/index.tsx";
 import { Form } from "@components/form/index.tsx";
 export const Contact = () => {
-  const { theme } = useThemes();
-  return (
-    <S.SectionContact>
+return (
+    <S.SectionContact id="Contato">
+      <S.TitleWarp>
+
+       <S.ServicesContact >
+        <S.Title>
+          <S.bar />
+          CONTATO
+        </S.Title>
+        <S.subTitle>Entre em contato com a gente :)</S.subTitle>
+        <S.TextBody>
+        Alguma dúvida, parceria ou deseja nos conhecer melhor? Manda uma mensagem!
+        </S.TextBody>
+      </S.ServicesContact>
+      </S.TitleWarp>
       <S.ContainerContact>
+        
         <Form />
         <S.ImageContainer>
           <S.imageIllustration
-          alt="Ilustração de uma pessoa usando o computador"
-            src={
-              theme === "light" ? ContactIllustration : ContactIllustrationBlack
-            }
+            alt="Ilustração de uma pessoa usando o computador"
+            src={ContactIllustration}
           />
         </S.ImageContainer>
       </S.ContainerContact>

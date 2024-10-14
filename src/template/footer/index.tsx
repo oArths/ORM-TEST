@@ -41,7 +41,6 @@ export const Footer = () => {
       )
       .then(
         (response) => {
-          console.log("EMAIL ENVIADsO", response.status, response.text);
           reset();
         },
         (err) => {
@@ -62,22 +61,17 @@ export const Footer = () => {
               <S.ContainerText>
                 <S.Title>Explore</S.Title>
                 <S.SubTitleLink href="#Sevicos">Nossos Serviços</S.SubTitleLink>
-                <S.SubTitle>Parcerias</S.SubTitle>
+                <S.SubTitleLink href="#Contato">Contato</S.SubTitleLink>
               </S.ContainerText>
             </S.Column>
             <S.Column>
               <S.ContainerText>
                 <S.Title>Sobre</S.Title>
-                <S.SubTitleLink href="#QuemSomos">História</S.SubTitleLink>
-                <S.SubTitleLink href="#Valores">Motivos & Valores</S.SubTitleLink>
-                <S.SubTitleLink href="#Ecossistema">Empresa como Hub</S.SubTitleLink>
-              </S.ContainerText>
-            </S.Column>
-            <S.Column>
-              <S.ContainerText>
-                <S.Title>Connect</S.Title>
-                <S.SubTitleLink href="#Contato">Contato</S.SubTitleLink>
-                <S.SubTitle>Contrate nossos devs</S.SubTitle>
+                <S.SubTitleLink href="#QuemSomos">Comunidades</S.SubTitleLink>
+                <S.SubTitleLink href="#QuemSomos">Quem Somos</S.SubTitleLink>
+                <S.SubTitleLink href="#Ecossistema">
+                  Empresa como Hub
+                </S.SubTitleLink>
               </S.ContainerText>
             </S.Column>
           </S.SectionWarpOne>
@@ -89,7 +83,8 @@ export const Footer = () => {
                 href="https://wa.me/5511949963686?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
                 target="_blank"
               >
-                <S.WhatsApp alt="Icone do WhatsApp" src={WhatsApp} /> (11) 94996-3686
+                <S.WhatsApp alt="Icone do WhatsApp" src={WhatsApp} /> (11)
+                94996-3686
               </S.SubTitleLink>
               <S.SubTitleLink
                 href="mailto:suportededomingo@outlook.com?subject=Solicitação%20de%20Informações&body=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços."
@@ -117,7 +112,7 @@ export const Footer = () => {
                   href="https://github.com/orgs/suporte-de-domingo"
                   target="_blank"
                 >
-                  <S.Icon  alt="Icone do GitHub" src={Git} />
+                  <S.Icon alt="Icone do GitHub" src={Git} />
                 </S.LinkIcons>
                 <S.LinkIcons
                   href="https://www.instagram.com/suportededomingo/"
@@ -129,7 +124,7 @@ export const Footer = () => {
                   href="https://www.linkedin.com/company/suporte-de-domingo/"
                   target="_blank"
                 >
-                  <S.Icon   alt="Icone do linkedin"src={Link} />
+                  <S.Icon alt="Icone do linkedin" src={Link} />
                 </S.LinkIcons>
               </S.Icons>
             </S.ContainerTextTow>
@@ -144,19 +139,19 @@ export const Footer = () => {
               <S.ErrorWarp>
                 {errors.email && <S.Error>{errors.email.message}</S.Error>}
               </S.ErrorWarp>
-            <S.ButtonWarp>
-              <ButtonDefault
-                title="Registrar-se"
-                minfontsize="1rem"
-                idealfontsize="0.833vw"
-                maxfontsize="1rem"
-                width="134px"
-                height="35px"
-                background={currentTheme.colors.blue900}
-                hovercolor={currentTheme.colors.blue850}
-                type="submit"
-              />
-            </S.ButtonWarp>
+              <S.ButtonWarp>
+                <ButtonDefault
+                  title="Registrar-se"
+                  minfontsize="1rem"
+                  idealfontsize="0.833vw"
+                  maxfontsize="1rem"
+                  width="134px"
+                  height="35px"
+                  background={currentTheme.colors.blue900}
+                  hovercolor={currentTheme.colors.blue850}
+                  type="submit"
+                />
+              </S.ButtonWarp>
             </S.ContainerText>
           </S.SectionWarpThree>
           <S.SectionWarpFour>
@@ -165,10 +160,11 @@ export const Footer = () => {
               <S.SubTitleLink href="#Sevicos">Nossos Serviços</S.SubTitleLink>
               <S.SubTitleLink href="#Contato">Contato</S.SubTitleLink>
               <S.SubTitleLink href="#QuemSomos">História</S.SubTitleLink>
-              <S.SubTitleLink href="#Valores">Motivos & Valores</S.SubTitleLink>
-              <S.SubTitleLink href="#Ecossistema">Empresa como Hub</S.SubTitleLink>
+              <S.SubTitleLink href="#Ecossistema">
+                Empresa como Hub
+              </S.SubTitleLink>
             </S.ContainerTextFour>
-            <div>
+            <S.IconsWarp>
               <S.Title>Nossas Redes & Comunidades</S.Title>
               <S.Icons>
                 <S.LinkIcons
@@ -196,7 +192,7 @@ export const Footer = () => {
                   <S.Icon alt="Icone do linkedin" src={Link} />
                 </S.LinkIcons>
               </S.Icons>
-            </div>
+            </S.IconsWarp>
           </S.SectionWarpFour>
         </S.ColumnContainer>
       </S.ContainerInfo>

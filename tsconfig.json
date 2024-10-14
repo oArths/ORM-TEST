@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "resolveJsonModule": true,
     "moduleResolution": "node",
     "baseUrl": "./",
+    
     "paths": {
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"]
